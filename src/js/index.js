@@ -39,11 +39,22 @@ var randomPosition = function(d) {
 }
 
 
-var tcColours = ['#FDBB30', '#EE3124', '#EC008C', '#F47521', '#7AC143', '#00B0DD'];
+var tcColours = ['#daafd6', '#fffff', '#FCDDBC', '#D9DBBC', '#B8D8BA', '#797B84'];
 var randomTcColour = function() {
   return Math.floor(Math.random() * tcColours.length);
 };
 
+
+//Selecting the text
+    var txt=d3.selectAll("article").select("h1")
+    	.style('color', tcColours[randomTcColour()]);
+	//d3.selectAll("article").select("h1").html()
+
+
+// CHANGING COLOR OF THE "Instructor Notes"
+
+//txt.attr("font-color","white")
+//txt.attr("color","red")
 
 // SVG viewport
 var svg = d3.select('header')
@@ -52,29 +63,31 @@ var svg = d3.select('header')
     .attr('height', '40vh');
 
 var update = function() {
+	 var txt=d3.selectAll("article").select("h1")
+    	.style('color', tcColours[randomTcColour()]);
     var baseCircle = svg.selectAll('circle');
-    var baseRect = svg.selectAll('rect');
+  //  var baseRect = svg.selectAll('rect');
 
     // Bind data
     baseCircle = baseCircle.data(data);
-    baseRect = baseRect.data(data);
+    //baseRect = baseRect.data(data);
 
-    // set the rects
-    baseRect.transition()
-            .duration(200)
-            .attr('width', xr)
-            .attr('height', xr)
-            .attr('x', randomPosition)
-            .attr('y', randomPosition)
-            .style('fill', tcColours[randomTcColour()]);
+//     // set the rects
+//    // baseRect.transition()
+//             .duration(200)
+//             .attr('width', xr)
+//             .attr('height', xr)
+//             .attr('x', randomPosition)
+//             .attr('y', randomPosition)
+//             .style('fill', tcColours[randomTcColour()]);
 
-    baseRect.enter()
-            .append('rect')
-            .attr('width', xr)
-            .attr('height', xr)
-            .attr('x', randomPosition)
-            .attr('y', randomPosition)
-            .style('fill', tcColours[randomTcColour()]);
+// //    baseRect.enter()
+//             .append('rect')
+//             .attr('width', xr)
+//             .attr('height', xr)
+//             .attr('x', randomPosition)
+//             .attr('y', randomPosition)
+//             .style('fill', tcColours[randomTcColour()]);
 
 
     // set the circles
@@ -85,7 +98,9 @@ var update = function() {
             .attr('cy', randomPosition)
             .attr('fill', "none")
             .attr("stroke-width", 4)
-            .style('stroke', tcColours[randomTcColour()]);
+            .style('stroke', tcColours[randomTcColour()])
+             .style('fill', tcColours[randomTcColour()]);
+
  
     baseCircle.enter()
             .append('circle')
@@ -94,11 +109,16 @@ var update = function() {
             .attr('cy', randomPosition)
             .attr('fill', "none")
             .attr("stroke-width", 4)
-            .style('stroke', tcColours[randomTcColour()]);
+            .style('stroke', tcColours[randomTcColour()])
+            .style('fill', tcColours[randomTcColour()]);
 
 
 }
 
 setInterval(function() {
     update();
-}, 512);
+}, 1000);
+
+
+
+

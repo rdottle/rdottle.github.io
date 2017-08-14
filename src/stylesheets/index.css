@@ -29,6 +29,19 @@
     flex: 4;
     min-height: 60vh;
   }
+  .name {
+    text-align:center;
+    top: -18%;
+    font-family: Decima;
+    font-size: 5em;
+    position: relative;
+    text-shadow:
+       -1px -1px 0 #fff,
+       1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+       1px 1px 0 #fff;  
+  }
+
   header {
     background: #daafd6;
     height: 40vh;
@@ -37,15 +50,6 @@
     padding: none;
   }
 
-  h1 {
-    font-size: 5em;
-    padding: none;
-    margin-top: none;
-    font-color: #daafd6;
-    text-align: center;
-    font-family: Decima;
-
-  }
 
   .post {
     border: 1px solid #000;
@@ -56,7 +60,6 @@
     
 
   }
-
 
 
   h2.menu-1 {
