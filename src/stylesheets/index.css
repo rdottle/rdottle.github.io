@@ -61,6 +61,35 @@
 
   }
 
+  p.article-text {
+    text-align: center;
+    font-family: Decima;
+    font-size: 2em;
+  }
+
+  p:hover {
+    color: #B8D8BA;
+  }
+
+  /* unvisited link */
+a:link {
+    color: #daafd6;
+}
+
+/* visited link */
+a:visited {
+    color: #B8D8BA;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FCDDBC;
+}
+
+/* selected link */
+a:active {
+    color: #797B84;
+}
 
   h2.menu-1 {
     font-size: 1em;
