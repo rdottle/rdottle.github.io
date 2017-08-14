@@ -65,33 +65,33 @@ var svg = d3.select('header')
 var update = function() {
 	 var txt=d3.selectAll("article").select("h1")
     	.style('color', tcColours[randomTcColour()]);
-    var baseCircle = svg.selectAll('circle');
-  //  var baseRect = svg.selectAll('rect');
+    //var baseCircle = svg.selectAll('circle');
+    var baseRect = svg.selectAll('rect');
 
     // Bind data
-    baseCircle = baseCircle.data(data);
-    //baseRect = baseRect.data(data);
+    //baseCircle = baseCircle.data(data);
+    baseRect = baseRect.data(data);
 
-//     // set the rects
-//    // baseRect.transition()
-//             .duration(200)
-//             .attr('width', xr)
-//             .attr('height', xr)
-//             .attr('x', randomPosition)
-//             .attr('y', randomPosition)
-//             .style('fill', tcColours[randomTcColour()]);
+    // set the rects
+    baseRect.transition()
+             .duration(200)
+             .attr('width', xr)
+             .attr('height', xr)
+             .attr('x', randomPosition)
+             .attr('y', randomPosition)
+             .style('fill', tcColours[randomTcColour()]);
 
-// //    baseRect.enter()
-//             .append('rect')
-//             .attr('width', xr)
-//             .attr('height', xr)
-//             .attr('x', randomPosition)
-//             .attr('y', randomPosition)
-//             .style('fill', tcColours[randomTcColour()]);
+    baseRect.enter()
+             .append('rect')
+             .attr('width', xr)
+             .attr('height', xr)
+             .attr('x', randomPosition)
+             .attr('y', randomPosition)
+             .style('fill', tcColours[randomTcColour()]);
 
 
     // set the circles
-    baseCircle.transition()
+ /*   //baseCircle.transition()
             .duration(250)
             .attr('r', xr)
             .attr('cx', randomPosition)
@@ -110,7 +110,7 @@ var update = function() {
             .attr('fill', "none")
             .attr("stroke-width", 4)
             .style('stroke', tcColours[randomTcColour()])
-            .style('fill', tcColours[randomTcColour()]);
+            .style('fill', tcColours[randomTcColour()]);*/
 
 
 }
