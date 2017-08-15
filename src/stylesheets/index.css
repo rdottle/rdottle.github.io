@@ -1,9 +1,11 @@
+
+
   body {
     display: flex;
     min-height: 100vh;
     flex-direction: row;
     margin: 0;
-    /*font-family: Helvetica; */
+    font-family: 'Russo One', sans-serif;
 
   }
 
@@ -15,11 +17,15 @@
   .col-1 {
     background: #000;
     flex: 1;
+    font-family: 'Russo One', sans-serif;
+
   }
   .col-2 {
     display: flex;
     flex-direction: column;
     flex: 5;
+    font-family: 'Russo One', sans-serif;
+
   }
   .content {
     display: flex;
@@ -32,7 +38,7 @@
   .name {
     text-align:center;
     top: -18%;
-    font-family: Decima;
+    font-family: 'Russo One', sans-serif;
     font-size: 5em;
     position: relative;
     text-shadow:
@@ -45,9 +51,13 @@
   header {
     background: #daafd6;
     height: 40vh;
+    font-family: 'Russo One', sans-serif;
+
   }
   header, article, nav {
     padding: none;
+    font-family: 'Russo One', sans-serif;
+
   }
 
 
@@ -63,7 +73,7 @@
 
   p.article-text {
     text-align: center;
-    font-family: Decima;
+    font-family: 'News Cycle', sans-serif;
     font-size: 2em;
   }
 
