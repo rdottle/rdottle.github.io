@@ -57,30 +57,34 @@ var randomTcColour = function() {
     }        
 
 
+var maxheight = $('article').height();
+
+
 var update = function(){
 
 var randomheight = function(d) {
 
 var windowheight = $('svg.test').height();
-    return (windowheight * Math.random());
+var maxheight = $('article').height();
+    return (Math.random()* (maxheight - windowheight) + 80);
 }
     var sampleSVG = d3.select("#circles")
         .append("svg")
         .attr("class", "test")
         .attr("width", windowWidth)
-        .attr("height", '40vh');    
+        .attr("height", maxheight);    
 
     sampleSVG.selectAll("circle")
         .data(dataset)
         .enter().append("circle")
-        .style("stroke", "gray")
-        .style("fill", "black")
-        .attr('r', 40)
+        .style("stroke", "#1d2588")
+        .style("fill", "#1d2588")
+        .attr('r', 80)
         .attr("cx", randomPosition)
         .attr("cy", randomheight);
 
 
-console.log(randomheight);
+console.log($('article').height());
 
 }
 
