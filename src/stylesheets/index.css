@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     margin: 0;
-    font-family: Josefin Sans; sans-serif;
+   font-family: Josefin Sans; sans-serif;
 
   }
 
@@ -18,11 +18,15 @@
   .col-1 {
     background: #000;
     flex: 1;
+    font-family: 'Russo One', sans-serif;
+
   }
   .col-2 {
     display: flex;
     flex-direction: column;
     flex: 5;
+    font-family: 'Russo One', sans-serif;
+
   }
   .content {
     display: flex;
@@ -34,9 +38,15 @@
   }
   .name {
     text-align:center;
+<<<<<<< HEAD
     top: -15%;
     font-family: Josefin Sans;
     font-size: 6em;
+=======
+    top: -18%;
+    font-family: 'Russo One', sans-serif;
+    font-size: 5em;
+>>>>>>> 6770ce548ef991614268caeb22a62e6bc484cd49
     position: relative;
     text-shadow:
        -1px -1px 0 #fff,
@@ -47,12 +57,21 @@
   }
 
   header {
+<<<<<<< HEAD
     background: #fff;
     width: 100%;
+=======
+    background: #daafd6;
+    height: 40vh;
+    font-family: 'Russo One', sans-serif;
+
+>>>>>>> 6770ce548ef991614268caeb22a62e6bc484cd49
   }
 
   header, article, nav {
     padding: none;
+    font-family: 'Russo One', sans-serif;
+
   }
 
   #wrapper, img{
@@ -74,7 +93,11 @@
 
   p.article-text {
     text-align: center;
+<<<<<<< HEAD
     font-family: Josefin Sans;
+=======
+    font-family: 'News Cycle', sans-serif;
+>>>>>>> 6770ce548ef991614268caeb22a62e6bc484cd49
     font-size: 2em;
   }
 
