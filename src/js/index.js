@@ -84,6 +84,4 @@ console.log(randomheight);
 
 }
 
-setInterval(function() {
-    update();
-}, 1000);
+update();
