@@ -1,9 +1,12 @@
+
+
   body {
     display: flex;
     min-height: 100vh;
+    display: flex;
     flex-direction: row;
     margin: 0;
-    /*font-family: Helvetica; */
+    font-family: Josefin Sans; sans-serif;
 
   }
 
@@ -31,24 +34,31 @@
   }
   .name {
     text-align:center;
-    top: -18%;
-    font-family: Decima;
-    font-size: 5em;
+    top: -15%;
+    font-family: Josefin Sans;
+    font-size: 6em;
     position: relative;
     text-shadow:
        -1px -1px 0 #fff,
        1px -1px 0 #fff,
       -1px 1px 0 #fff,
-       1px 1px 0 #fff;  
+       1px 1px 0 #fff;
+
   }
 
   header {
-    background: #daafd6;
-    height: 40vh;
+    background: #fff;
+    width: 100%;
   }
+
   header, article, nav {
     padding: none;
   }
+
+  #wrapper, img{
+    width:100%;
+    height: 40%;
+}
 
 
   .post {
@@ -57,42 +67,43 @@
     width: 100px;
     text-align: center;
     margin: 2em;
+    display: flex;
     
 
   }
 
   p.article-text {
     text-align: center;
-    font-family: Decima;
+    font-family: Josefin Sans;
     font-size: 2em;
   }
 
   p:hover {
-    color: #B8D8BA;
+    color: #1d2588;
   }
 
   /* unvisited link */
 a:link {
-    color: #daafd6;
+    color: #1d2588;
 }
 
 /* visited link */
 a:visited {
-    color: #B8D8BA;
+    color: #fff101;
 }
 
 /* mouse over link */
 a:hover {
-    color: #FCDDBC;
+    color: #ebbdbb;
 }
 
 /* selected link */
 a:active {
-    color: #797B84;
+    color: ##f24a6b ;
 }
 
   h2.menu-1 {
     font-size: 1em;
     padding-left: 10%;
-    font-color: #fffff;
+    font-color: #fff;
   }
