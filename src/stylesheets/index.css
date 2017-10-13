@@ -40,7 +40,7 @@
     font-family: 'Josefin Sans';
     font-size: 8em;
     top: -18%;
-    position: absolute;
+    position: relative;
     padding:none;
     text-shadow:
        -1px -1px 0 #fff,
