@@ -142,7 +142,7 @@
 
   .project:hover {
     border: 6px solid  #1d2588;
-    transform: scale(2);
+    transform: scale(1.2);
   }
 
   #wrapper {
