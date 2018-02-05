@@ -26,60 +26,60 @@ var randomTcColour = function() {
         dataset.push(Math.round(Math.random()*100));
     }        
 
-var circlediv = document.getElementById("circles");
-var svg = d3.select(circlediv).append("svg");
+// var circlediv = document.getElementById("circles");
+// var svg = d3.select(circlediv).append("svg");
 
-var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .offset([-10, 0])
-  .html(function(d) {
-    return "<strong>Frequency:</strong> <span style='color:red'>" + "thing" + "</span>";
-  })
-
-
-function redraw(){
-
-        var width = circlediv.clientWidth;
-        var height = circlediv.clientHeight;
-
-        svg
-          .attr("width", width)
-          .attr("height", height)
-          .attr("class", "circle");
-
-    }
-var circlecolour = tcColours[randomTcColour()];
-
-redraw();
- window.addEventListener("resize", redraw);
-
-var update = function(){
-    var width = circlediv.clientWidth;
-    var height = circlediv.clientHeight;
-    d3.selectAll("circle").remove();
-    var sampleSVG = d3.select("#circles")
-    var randomPosition = function(d) {
-         return Math.random() * (width);}
-
-    //d3.selectAll("svg > *").remove();
-    var randomheight = function(d) {
-    return (Math.random()* (height));
-    }
-    svg.selectAll("circle")
-        .data(dataset)
-        .enter().append("circle")
-        .style("stroke", circlecolour)
-        .style("fill", circlecolour)
-        .attr('r', 50)
-        .attr("cx", randomPosition)
-        .attr("cy", randomheight)
-      //  .on('mouseover', tip.show)
-      //  .on('mouseout', tip.hide);
+// var tip = d3.tip()
+//   .attr('class', 'd3-tip')
+//   .offset([-10, 0])
+//   .html(function(d) {
+//     return "<strong>Frequency:</strong> <span style='color:red'>" + "thing" + "</span>";
+//   })
 
 
-}
+// function redraw(){
 
-console.log($('article').height());
+//         var width = circlediv.clientWidth;
+//         var height = circlediv.clientHeight;
+
+//         svg
+//           .attr("width", width)
+//           .attr("height", height)
+//           .attr("class", "circle");
+
+//     }
+// var circlecolour = tcColours[randomTcColour()];
+
+// redraw();
+//  window.addEventListener("resize", redraw);
+
+// var update = function(){
+//     var width = circlediv.clientWidth;
+//     var height = circlediv.clientHeight;
+//     d3.selectAll("circle").remove();
+//     var sampleSVG = d3.select("#circles")
+//     var randomPosition = function(d) {
+//          return Math.random() * (width);}
+
+//     //d3.selectAll("svg > *").remove();
+//     var randomheight = function(d) {
+//     return (Math.random()* (height));
+//     }
+//     svg.selectAll("circle")
+//         .data(dataset)
+//         .enter().append("circle")
+//         .style("stroke", circlecolour)
+//         .style("fill", circlecolour)
+//         .attr('r', 50)
+//         .attr("cx", randomPosition)
+//         .attr("cy", randomheight)
+//       //  .on('mouseover', tip.show)
+//       //  .on('mouseout', tip.hide);
+
+
+// }
+
+// console.log($('article').height());
 
 update();
 setInterval(function() {
