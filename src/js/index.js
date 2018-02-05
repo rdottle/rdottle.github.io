@@ -81,9 +81,9 @@ var randomTcColour = function() {
 
 // console.log($('article').height());
 
-update();
-setInterval(function() {
-    update();
-}, 3000);
+// update();
+// setInterval(function() {
+//     update();
+// }, 3000);
 
 
