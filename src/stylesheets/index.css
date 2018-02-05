@@ -12,7 +12,6 @@
 
   }
   
-  
   .col-1 {
     background: #000;
     flex: 1;
@@ -72,9 +71,13 @@
 
   }
 
+  .project-container {
+    width:100vw;
+    height: 100vh;
+  }
+
   #link-1 {
     width: 25%;
-    height:25%;
     float: left;
     margin-left:3%;
     margin-right: 5%;
@@ -83,7 +86,6 @@
 
   #link-2 {
     width: 25%;
-    height:25%;
     float: right;
     margin-right: 5%;
     margin-left:5%;
@@ -117,7 +119,6 @@
 
   #link-6 {
     width: 25%;
-    height:25%;
     float: right;
     margin-right: 5%;
     margin-left:5%;
@@ -129,7 +130,7 @@
   }
 
   .ls {
-    height:50%;
+    width: 100%;
   }
 
 /*
