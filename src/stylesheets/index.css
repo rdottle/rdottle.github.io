@@ -135,12 +135,8 @@
     height:60%;
     margin-bottom: 10%;
     padding: 0 10% 0 10%;
-
   }
 
-  p:hover {
-    color: #1d2588;
-  }
 
   /* unvisited link */
 a:link {
@@ -203,6 +199,4 @@ a:active {
   text-align: center;
   position: fixed;
   bottom: 0;
-
-
  }
