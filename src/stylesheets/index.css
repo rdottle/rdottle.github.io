@@ -7,7 +7,7 @@
     justify-content: center;
     width: 100%;
     text-align: center;
-    position: relative;
+    position: absolute;
     margin: 10px auto;
     display: inline-block;
     bottom: 0;
@@ -87,37 +87,39 @@
   }
 
   .ls {
-    width: 90%; 
-    margin: 5%;
+      width: 100%;
+      border: 6px solid #f24a6b;
      }
 
-  .project-container {
-    width:100vw;
-    height: 100vh;
-  }
-
-  #link-1, #link-2, #link-3, #link-4, #link-5, #link-6, #link-7, #link-8, #link-9, #link-10, #link-11, #link-12 {
-    width: 30%;
-    display: inline-block;
-    margin-bottom: 5%;
-    margin-left:2%;
-  }
-
-  .project {
-    border: 6px solid #f24a6b;
-  }
-
-/*
-  #circles {
-    padding: none;
-    width:100vw;
-    height:900px;
-  }*/
-
-  .project:hover {
+  .ls:hover {
     border: 6px solid  #1d2588;
     transform: scale(1.1);
   }
+
+  .project-container {
+    width: calc(100vw - 40px);
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .linked {
+    margin: 0 auto 5%;
+  }
+  
+  @media only screen and (min-width: 701px) { 
+    .linked {
+      width: 30% !important;
+    }
+   }
+
+  @media only screen and (max-width: 700px) {
+    .linked {
+      width: 90%;
+    }
+  }
+
 
   #wrapper {
     width:100%;
