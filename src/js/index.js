@@ -70,7 +70,6 @@ function makeGrid(projects){
     // project.append('p').attr('class','org').text('for '+row[2]);
     var overlay = link.append('div').attr('class','project-overlay');
     var image = overlay.append('div').attr('class', 'image project ls');
-    console.log(row);
     image.append('img').attr('src','/src/images/'+ row[4]).attr('class', 'image-size');
 });
   }
