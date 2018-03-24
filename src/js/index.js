@@ -26,65 +26,52 @@ var randomTcColour = function() {
         dataset.push(Math.round(Math.random()*100));
     }        
 
-// var circlediv = document.getElementById("circles");
-// var svg = d3.select(circlediv).append("svg");
-
-// var tip = d3.tip()
-//   .attr('class', 'd3-tip')
-//   .offset([-10, 0])
-//   .html(function(d) {
-//     return "<strong>Frequency:</strong> <span style='color:red'>" + "thing" + "</span>";
-//   })
 
 
-// function redraw(){
-
-//         var width = circlediv.clientWidth;
-//         var height = circlediv.clientHeight;
-
-//         svg
-//           .attr("width", width)
-//           .attr("height", height)
-//           .attr("class", "circle");
-
-//     }
-// var circlecolour = tcColours[randomTcColour()];
-
-// redraw();
-//  window.addEventListener("resize", redraw);
-
-// var update = function(){
-//     var width = circlediv.clientWidth;
-//     var height = circlediv.clientHeight;
-//     d3.selectAll("circle").remove();
-//     var sampleSVG = d3.select("#circles")
-//     var randomPosition = function(d) {
-//          return Math.random() * (width);}
-
-//     //d3.selectAll("svg > *").remove();
-//     var randomheight = function(d) {
-//     return (Math.random()* (height));
-//     }
-//     svg.selectAll("circle")
-//         .data(dataset)
-//         .enter().append("circle")
-//         .style("stroke", circlecolour)
-//         .style("fill", circlecolour)
-//         .attr('r', 50)
-//         .attr("cx", randomPosition)
-//         .attr("cy", randomheight)
-//       //  .on('mouseover', tip.show)
-//       //  .on('mouseout', tip.hide);
+var clientID = '800533449318-mvcj3fknreqrubcs7iddvdg11bej92b7.apps.googleusercontent.com';
+var API = 'AIzaSyAsznDdFF8js8ofIaiRwi1Tnfd_LrAe8vM';
+var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+var projects;
 
 
-// }
+function getData() {
+    gapi.client.sheets.spreadsheets.values.get({
+      spreadsheetId: '17I9IMsBv39Ygm-uQtylamYfIBj0I6GppfK-pVI94NiA',
+      range: 'Sheet1!A2:F',
+    }).then(function(response) {
+      makeGrid(response.result.values);
+    });
+  }
 
-// console.log($('article').height());
+function handleClientLoad() {
+    gapi.load('client:auth2', initClient);
+  }
 
-// update();
-// setInterval(function() {
-//     update();
-// }, 3000);
+function initClient() {
+  gapi.client.init({
+    apiKey: API,
+    clientId: clientID,
+    discoveryDocs: DISCOVERY_DOCS,
+    scope: SCOPES
+  }).then(function () {
+    getData();
+  });
+}
 
+console.log('help');
 
+function makeGrid(projects){
+  projects.forEach(function(row) {
+    var link = d3.select('.project-container').append('a').attr('class','box').attr('href',row[5])
+    var project = link.append('div').attr('class','linked');
+    project.append('div').attr('class','title').append('div').attr('class','text-box').text(row[0]);
+    project.append('div').attr('class','date').append('div').attr('class','text-box').text(row[1]);
+    // project.append('p').attr('class','org').text('for '+row[2]);
+    var overlay = link.append('div').attr('class','project-overlay');
+    var image = overlay.append('div').attr('class', 'image project ls');
+    console.log(row);
+    image.append('img').attr('src','/src/images/'+ row[4]).attr('class', 'image-size');
+});
+  }
 
