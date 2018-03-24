@@ -143,6 +143,7 @@ a:active {
     margin: 10px;
     display: flex;
     max-width: 40%;
+    min-width: 310px;
     border: 1px dashed #ff4000;
     justify-content: center;
     overflow: hidden;
