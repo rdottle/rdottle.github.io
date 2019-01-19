@@ -27,7 +27,7 @@
     font-family: Josefin Sans;
     font-size: 2em;
     height:60%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     padding: 0 10% 0 10%;
   }
 
@@ -103,7 +103,7 @@ a:active {
        1px -1px 0 #fff,
       -1px 1px 0 #fff,
        1px 1px 0 #fff;
-    margin:none;
+    margin: 20px !important;
     width:100vw;
 
   }
@@ -131,12 +131,12 @@ a:active {
   }
 
 .project-container {
-  width: calc(100vw - 40px);
+  width: calc(100vw);
   height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin-top: 0;
 }
 
   .box {
@@ -169,10 +169,13 @@ a:active {
   
   .image {
     height: 100%;
+    width: 300px;
+    display: flex;
+    justify-content: center;
   }
 
   .image-size {
-    height: 210px;
+    height: 300px;
   }
 
 
