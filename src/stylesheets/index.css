@@ -26,7 +26,6 @@
     text-align: center;
     font-family: Josefin Sans;
     font-size: 2em;
-    height:60%;
     margin-bottom: 5%;
     padding: 0 10% 0 10%;
   }
@@ -69,7 +68,6 @@ a:active {
 
 .headerimg {
       width:100%;
-      height: 40%;
 
 }
   
@@ -95,7 +93,6 @@ a:active {
     text-align:center;
     font-family: 'Josefin Sans';
     font-size: 8em;
-    top: -18%;
     position: relative;
     padding:none;
     text-shadow:
