@@ -27,7 +27,7 @@
     font-family: Josefin Sans;
     font-size: 2em;
     margin-bottom: 5%;
-    padding: 0 10% 0 10%;
+    padding: 0 20% 0 20%;
   }
 
 /*make a change
@@ -142,7 +142,7 @@ a:active {
     display: flex;
     max-width: 40%;
     min-width: 210px;
-    border: 2px dashed #ff4000;
+    border: 2px solid #ffffff;
     justify-content: center;
     overflow: hidden;
     height: 210px;
@@ -156,7 +156,7 @@ a:active {
    }
 
   .box:hover {
-    border: 2px dashed rgb(29, 37, 136);
+    border: 2px solid #ff4000;
 
   }
 
