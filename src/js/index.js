@@ -59,18 +59,18 @@ function initClient() {
   });
 }
 
-console.log('help');
+
 
 function makeGrid(projects){
-  projects.forEach(function(row) {
-    var link = d3.select('.project-container').append('a').attr('class','box').attr('href',row[5])
-    var project = link.append('div').attr('class','linked');
-    project.append('div').attr('class','title').append('div').attr('class','text-box').text(row[0]);
-    project.append('div').attr('class','date').append('div').attr('class','text-box').text(row[1]);
-    // project.append('p').attr('class','org').text('for '+row[2]);
-    var overlay = link.append('div').attr('class','project-overlay');
-    var image = overlay.append('div').attr('class', 'image project ls');
-    image.append('img').attr('src','/src/images/'+ row[4]).attr('class', 'image-size');
-});
+//   projects.forEach(function(row) {
+//     var link = d3.select('.project-container').append('a').attr('class','box').attr('href',row[5])
+//     var project = link.append('div').attr('class','linked');
+//     project.append('div').attr('class','title').append('div').attr('class','text-box').text(row[0]);
+//     project.append('div').attr('class','date').append('div').attr('class','text-box').text(row[1]);
+//     // project.append('p').attr('class','org').text('for '+row[2]);
+//     var overlay = link.append('div').attr('class','project-overlay');
+//     var image = overlay.append('div').attr('class', 'image project ls');
+//     image.append('img').attr('src','/src/images/'+ row[4]).attr('class', 'image-size');
+// });
   }
 
