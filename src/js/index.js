@@ -6,19 +6,16 @@ import 'intersection-observer';
 const projectData = require("./../data/projects.json");
 
 
-
-document.addEventListener("DOMContentLoaded", function(){
-    d3.select("body").style("visibility", "visible");
-});
-
-
 // import map class and find parent el
 import { aProject } from "./aProject.js";
 const projectContainer = d3.select("#all-projects");
 
-let projjies = new aProject({
-  data: projectData,
-  container: projectContainer
+
+document.addEventListener("DOMContentLoaded", function(){
+    d3.select("body").style("visibility", "visible");
+	let projjies = new aProject({
+		  data: projectData,
+		  container: projectContainer
+		});
+
 });
-
-
