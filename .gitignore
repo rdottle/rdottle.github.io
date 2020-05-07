@@ -1,8 +1,3 @@
 /node_modules
 client_secret.json
-*.jpg
 package.json
-webpack.config.js
-yarn.lock
-/src
-/dist
